@@ -5,15 +5,17 @@ body {
   padding: 0;
   color: #333;
 }
-a { color: #b7a077; }
-a:visited { color: #a8a8a8; }
-a:hover {
-  color: #988564;
-  font-weight: bold;
-  text-decoration: none;
+a { color: #b7a077;
+    &:hover {
+      color: #988564;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    &:visited { color: #a8a8a8; }
+    img { transition: opacity 0.2s linear;
+      &:hover { opacity: 0.7; } }
 }
-a img { transition: opacity 0.2s linear; }
-a:hover img { opacity: 0.7; }
+
 h1, h2, h3, h4, h5, h6 { margin-top: 0; }
 p {
   margin-top: 0;
@@ -26,18 +28,19 @@ img { vertical-align: bottom; }
   font-size: 26px;
   color: #44382d;
   border-bottom: solid 3px #716961;
+  h2 {
+    font-size: 22px;
+    border: 1px solid #b7a077;
+    padding: 11px 22px;
+    border-radius: 5px;
+  }
+  h3 {
+    font-size: 18px;
+    border-left: solid 3px #b7a077;
+    padding: 4px 9px 4px 14px;
+  }
 }
-#main h2 {
-  font-size: 22px;
-  border: 1px solid #b7a077;
-  padding: 11px 22px;
-  border-radius: 5px;
-}
-#main h3 {
-  font-size: 18px;
-  border-left: solid 3px #b7a077;
-  padding: 4px 9px 4px 14px;
-}
+
 /* ヘッダー */
 header {
   width: 980px;
@@ -321,7 +324,7 @@ footer {
 }
 
 #entry #submit_button_cover {
-  text-align: center; 
+  text-align: center;
 }
 #entry #submit_button {
   background-color: #b7a077;
@@ -332,9 +335,9 @@ footer {
   color: #fff;
   cursor: pointer;
   transition: background 0.1s linear;
-}
-#entry #submit_button:hover {
-  background: #c7ae81;
+  &:hover {
+    background: #c7ae81;
+  }
 }
 
 /* ---------------------------------
